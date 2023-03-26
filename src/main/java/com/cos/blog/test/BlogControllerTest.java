@@ -1,7 +1,11 @@
 package com.cos.blog.test;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 // 스프링이 com.cos.blog 이하를 스캔해서 모든 파일을 
 //메모리에 new하지 않고 특정 anotation 붙어있는 클래스 파일을 관리
@@ -16,5 +20,4 @@ public class BlogControllerTest {
 			
 	}
 	
-
 }
