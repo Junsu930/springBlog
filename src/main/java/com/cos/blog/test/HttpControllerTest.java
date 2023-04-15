@@ -23,7 +23,7 @@ public class HttpControllerTest {
 	}
 	
 	// http://localhost:8080/http/post
-	@PostMapping("http/post")
+	@PostMapping("http/post") // messageConverter  (스프링부트)
 	public String postTest(@RequestBody Member m ) {
 		return "post 요청 : "  + m.getId() + ", " + m.getPassword() + ", " + m.getUserName() + ", " + m.getEmail();
 	}

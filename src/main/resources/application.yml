@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: 1234
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: js_blog
+# JPA
+  jpa:
+    database: oracle
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+#        show-sql: true # System.out을 통해 찍는다.
+        format_sql: true
+        jdbc.lob.non_contextual_creation: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace # 파라미터 보여준다.
+    
+server:
+ port: 8000
+ servlet:
+  context-path: /blog
+  encoding:
+   charset: UTF-8
+   enabled: true
+   force: true
+    
+
+      
