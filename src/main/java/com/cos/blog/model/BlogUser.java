@@ -29,7 +29,7 @@ public class BlogUser {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(nullable=false, length=30)
+	@Column(nullable=false, length=30, unique=true)
 	private String userName;
 	
 	@Column(nullable=false, length=100)

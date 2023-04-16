@@ -29,5 +29,9 @@ server:
    enabled: true
    force: true
     
-
+Spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
       
