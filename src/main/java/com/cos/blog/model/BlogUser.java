@@ -45,8 +45,5 @@ public class BlogUser {
 	 
 	@CreationTimestamp //시간이 자동으로 입력
 	private Timestamp createDate;
-	
-	
-	
 
 }
