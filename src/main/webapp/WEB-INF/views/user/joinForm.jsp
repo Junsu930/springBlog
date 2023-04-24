@@ -4,7 +4,7 @@
 	<form>
 	  <div class="form-group">
 	    <label for="username">User Name:</label>
-	    <input type="text" class="form-control" placeholder="Enter username" id="username">
+	    <input type="text" class="form-control" placeholder="Enter username" id="userName">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Password:</label>

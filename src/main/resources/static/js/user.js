@@ -8,7 +8,7 @@ let index = {
 	
 	save:function(){
 		let data = {
-			username : $("#username").val(),
+			userName : $("#userName").val(),
 			password : $("#password").val(),
 			email : $("#email").val()	
 		};
@@ -30,7 +30,7 @@ let index = {
 			// 수행 결과가 정상일 때
 			console.log(resp);
 			alert("회원가입이 완료되었습니다.");
-			//location.href="/blog";
+			location.href="/blog";
 		}).fail(function(error){
 			// 수행 결과가 실패할 때
 			alert(JSON.stringify(error));
