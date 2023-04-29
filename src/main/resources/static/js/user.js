@@ -22,7 +22,7 @@ let index = {
 			type : "POST",
 			url : "/blog/api/user",
 			data : JSON.stringify(data),
-			contentType : "application/json; charset=utf-8", // body 데이터가 어떤 타입인지
+			contentType : "application/json;charset=utf-8", // body 데이터가 어떤 타입인지
 			dataType : "json", // 요청이 서버로 왔을 때 어떤 타입일지, 기본적으로는 String 
 			// (데이터타입을 json으로 명시하고, 생긴 게 json이면 javascript object로 변경해줌)
 			

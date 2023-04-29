@@ -16,17 +16,8 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	@Transactional
-	public int 회원가입(BlogUser user) {
-		try{
+	public void joinMember(BlogUser user) {
 			userRepository.save(user);
-			return 1;
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("UserService: 회원가입() : " + e.getMessage());
-		}
-		
-		return -1;
 	}
 
 }

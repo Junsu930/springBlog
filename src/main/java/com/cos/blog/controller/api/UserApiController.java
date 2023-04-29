@@ -22,12 +22,12 @@ public class UserApiController {
 		
 		user.setRole(RoleType.USER);
 		
-		int result = userService.회원가입(user);
+		userService.joinMember(user);
 		
 		
 		
 		System.out.println("UserApiController : save 호출됨");
-		return new ResponseDTO<Integer>(HttpStatus.OK, result) ; // 자바오브젝트를 JSON으로 변화해서 리턴
+		return new ResponseDTO<Integer>(HttpStatus.OK.value(), 1); // 자바오브젝트를 JSON으로 변화해서 리턴
 	}
 
 }
