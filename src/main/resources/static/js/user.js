@@ -5,9 +5,6 @@ let index = {
 			this.save();
 		});
 		
-		$("#btn-login").on("click", ()=>{
-			this.login();
-		})
 	},
 	
 	save:function(){
@@ -24,7 +21,7 @@ let index = {
 			// 회원가입 수행 요청
 			// ajax는 default가 비동기 호출
 			type : "POST",
-			url : "/blog/api/user",
+			url : "/auth/joinProc",
 			data : JSON.stringify(data),
 			contentType : "application/json;charset=utf-8", // body 데이터가 어떤 타입인지
 			dataType : "json", // 요청이 서버로 왔을 때 어떤 타입일지, 기본적으로는 String 
@@ -34,37 +31,7 @@ let index = {
 			// 수행 결과가 정상일 때
 			console.log(resp);
 			alert("회원가입이 완료되었습니다.");
-			location.href="/blog";
-		}).fail(function(error){
-			// 수행 결과가 실패할 때
-			alert(JSON.stringify(error));
-		}); 
-	},
-	
-		login:function(){
-		let data = {
-			userName : $("#userName").val(),
-			password : $("#password").val(),
-		};
-		
-		// console.log(data);
-		
-		$.ajax({
-			// ajax 통신을 통해서 3개의 데이터를 JSON으로 변경하여 insert요청
-			// 회원가입 수행 요청
-			// ajax는 default가 비동기 호출
-			type : "POST",
-			url : "/blog/api/user/login",
-			data : JSON.stringify(data),
-			contentType : "application/json;charset=utf-8", // body 데이터가 어떤 타입인지
-			dataType : "json", // 요청이 서버로 왔을 때 어떤 타입일지, 기본적으로는 String 
-			// (데이터타입을 json으로 명시하고, 생긴 게 json이면 javascript object로 변경해줌)
-			
-		}).done(function(resp){
-			// 수행 결과가 정상일 때
-			console.log(resp);
-			alert("로그인이 완료되었습니다.");
-			location.href="/blog";
+			location.href="/";
 		}).fail(function(error){
 			// 수행 결과가 실패할 때
 			alert(JSON.stringify(error));

@@ -22,7 +22,7 @@ public class UserApiController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/api/user")
+	@PostMapping("/auth/joinProc")
 	public ResponseDTO<Integer> save(@RequestBody BlogUser user) { //userName, password, email
 		
 		user.setRole(RoleType.USER);
@@ -35,17 +35,8 @@ public class UserApiController {
 		return new ResponseDTO<Integer>(HttpStatus.OK.value(), 1); // 자바오브젝트를 JSON으로 변화해서 리턴
 	}
 	
-	@PostMapping("/api/user/login")
-	public ResponseDTO<Integer> login(@RequestBody BlogUser user, HttpSession session){
-		System.out.println("UserApiController : login 호출됨");
-		BlogUser principal = userService.login(user);
-		// 접근 주체 
-		
-		if(principal != null) {
-			session.setAttribute("principal", principal);
-		}
-		return new ResponseDTO<Integer>(HttpStatus.OK.value(), 1);
-		
-	}
+
+	
+	
 
 }

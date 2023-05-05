@@ -20,12 +20,12 @@
 		<!-- 추가 라이브러리 시작 -->
 		
 		<!-- 시큐리티 태그 라이브러리 -->
-		<!--
+		
 		<dependency>
 		  <groupId>org.springframework.security</groupId>
 		  <artifactId>spring-security-taglibs</artifactId>
 		</dependency>
-		-->
+		
 		
 		<!-- JSP 템플릿 엔진 -->
 		<dependency>
@@ -42,6 +42,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -60,7 +61,6 @@
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
 			<version>6.0.0</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->

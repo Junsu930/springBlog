@@ -9,5 +9,5 @@ import com.cos.blog.model.BlogUser;
 //@Repository 생략 가능
 public interface UserRepository extends JpaRepository<BlogUser, Integer>{
 	// JPA 네이밍 전략
-	BlogUser findByUserNameAndPassword(String userName, String password);
+	//BlogUser findByUserNameAndPassword(String userName, String password);
 }
