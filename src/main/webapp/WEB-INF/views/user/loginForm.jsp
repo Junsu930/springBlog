@@ -4,7 +4,7 @@
 	<form action="#" method="POST">
 	  <div class="form-group">
 	    <label for="username">User Name:</label>
-	    <input type="text" name="username" class="form-control" placeholder="Enter username" id="userName">
+	    <input type="text" name="userName" class="form-control" placeholder="Enter username" id="userName">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Password:</label>
@@ -19,6 +19,5 @@
 	</form>
 </div>
 
-<script type=text/javascript src="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp" %>
 
