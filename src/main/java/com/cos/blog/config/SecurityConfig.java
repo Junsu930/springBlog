@@ -26,7 +26,11 @@ public class SecurityConfig {
 				.requestMatchers("/","/auth/**", "/js/**", "/css/**", "/image/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
-				.formLogin().loginPage("/auth/loginForm");
+				.formLogin().loginPage("/auth/loginForm")
+				.loginProcessingUrl("/auth/loginProc")
+				.defaultSuccessUrl("/"); // 스프링 시큐리티가 해당 주소로 오는 로그인을 가로채서 대신 로그인 해줌 
+		
+														
 
 		return http.build();
 	}
