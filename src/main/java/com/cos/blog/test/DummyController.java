@@ -120,7 +120,7 @@ public class DummyController {
 	// http의 body에 userName, password, email 데이터를 가지고 (요청)
 	@PostMapping("/dummy/join")
 	public String join(BlogUser user) { // key = value 형태 (약속된 규칙)
-		System.out.println("userName : " + user.getUserName());
+		System.out.println("userName : " + user.getUsername());
 		System.out.println("password : " + user.getPassword());
 		System.out.println("email : " + user.getEmail());
 		

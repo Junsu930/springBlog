@@ -15,22 +15,25 @@ public class PrincipalDetail implements UserDetails{
 	private BlogUser user; // Composition
 
 
+	public PrincipalDetail(BlogUser user) {
+		this.user = user;
+	}
 
 	@Override
 	public String getPassword() {
 
+		
 		return user.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		return user.getUserName();
+		return user.getUsername();
 	}
 
 	// 계정이 만료되지 않았는지를 리턴한다. ( true: 만료 안 됨 ) 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
@@ -59,6 +62,8 @@ public class PrincipalDetail implements UserDetails{
 
 		// 계정이 가진 권한 목록을 리턴
 		collectors.add(()->{return "ROLE_" + user.getRole();} );
+		
+		System.out.println("로그인 로직 호출됨");
 		
 		return collectors;
 	}

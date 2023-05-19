@@ -3,8 +3,8 @@
 <div  style = "width:800px; margin:auto;">
 	<form action="auth/loginProc" method="POST">
 	  <div class="form-group">
-	    <label for="userName">User Name:</label>
-	    <input type="text" name="userName" class="form-control" placeholder="Enter username" id="userName">
+	    <label for="username">User Name:</label>
+	    <input type="text" name="username" class="form-control" placeholder="Enter username" id="userName">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Password:</label>
